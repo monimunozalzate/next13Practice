@@ -1,8 +1,8 @@
 import Navigation from "./components/navigation/Navigation";
 import "./globals.css";
-import { Space_Grotesk } from "next/font/google";
+//import { Space_Grotesk } from "next/font/google";
 
-const font = Space_Grotesk({ subsets: ["latin"], weight:[400, 700] });
+//const font = Space_Grotesk({ subsets: ["latin"], weight:[400, 700] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
       <head>
         <title>My 1st app with nextjs 13</title>
       </head>
-      <body className={font.className}>
+      <body 
+      //className={font.className}
+      >
         <Navigation />
         {children}
       </body>

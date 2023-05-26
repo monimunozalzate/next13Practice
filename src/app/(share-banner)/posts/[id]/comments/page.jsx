@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { resolve } from "styled-jsx/css";
 
@@ -19,6 +20,7 @@ export default async function CommentsPage({ params }) {
     <ul style={{background:'#444', padding:'1rem 1rem 1rem 2rem', marginTop:'2rem'}}>
       {comments.map((comment) => (
         <li key={comment.id} style={{ margin: "1rem 0" }}>
+          <Image alt={comment.name} width='50' height='50' src={`https:avatars.dicebear.com/api/pixel-art-neutral/${comment.mail}.svg`}/>
           <h4 >{comment.name}</h4>
           <small>{comment.body}</small>
         </li>
